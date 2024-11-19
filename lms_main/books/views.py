@@ -3,7 +3,10 @@ from django.http import HttpResponse
 # Create your views here.
 
 def home(request):
-    return HttpResponse("home page..")
+    return render(request,"books/home.html")
+    # return HttpResponse("home page..")
 
 def books(request):
-    return HttpResponse("books page ..")
+    details = {'name': 'Complete Python Course', 'author' : 'Rahul', 'publisher' : 'Rahul'}
+    return render(request,"books/books.html", context=details)
+    # return HttpResponse("books page ..")
