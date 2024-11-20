@@ -6,7 +6,25 @@
     <title>Code first app</title>
 </head>
 <body>
-    <h1><i>hello {{name}} and my age {{age}}.</i></h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt distinctio, iure porro eius, quibusdam totam quo dolore sint, quidem reiciendis illum? Impedit et unde, nemo rerum laboriosam voluptate vitae perferendis!</p>
+    <h1>Student Records</h1>
+    {% if Student_data != '' %}
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Roll Number</th>
+        </tr>
+        {% for Student in Student_data %}
+        <tr>
+            <td>{{Student.name}}</td>
+            <td>{{Student.age}}</td>
+            <td>{{Student.roll_no}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <h2>No Records Found</h2>
+    {% endif %}
+    
 </body>
 </html>
