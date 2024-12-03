@@ -1,9 +1,11 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code first app</title>
+    <link rel="stylesheet" href= "{% static "css/style.css"%}">
 </head>
 <body>
     <h1>Student Records</h1>
@@ -26,5 +28,6 @@
     <h2>No Records Found</h2>
     {% endif %}
     
+    <img width="300" src= "{% static "images/cat.jpg" %}" alt="Something Went Wrong.">
 </body>
 </html>
